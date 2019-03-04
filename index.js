@@ -4,7 +4,7 @@ const {
     deduplication
 } = require('./util');
 
-nunjucks.configure('template', {
+nunjucks.configure(__dirname + '/template', {
     autoescape: false, //不使用自动转义
     tags: {
         blockStart: '<%',
