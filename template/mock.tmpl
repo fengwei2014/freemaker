@@ -1,0 +1,22 @@
+/**
+ * This is auto created by freemaker script, place do not modify directly
+ * @author {{ author }}
+ */
+const Mock = require('mockjs');
+// const Random = Mock.Random;
+const mock = Mock.mock;
+
+const proxy = {
+<% for item in xhr.list %>
+    /**
+    * {{ item.desc }}
+    * @param {{ item.req }}
+    */<% if item.method === 'get' %>
+    'GET {{mock.path + item.url}}': mock({{item.mockObj}}),<% else %>
+    'POST {{mock.path + item.url}}': (req, res) => {
+        return res.json({{item.mockObj}})
+    },<% endif %>
+<% endfor %>
+};
+
+module.exports = proxy;

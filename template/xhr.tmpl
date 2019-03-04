@@ -1,0 +1,16 @@
+/**
+ * This is auto created by freemaker script, place do not modify directly
+ * @author {{ author }}
+ */
+import Api from '../api'
+import { {{ importTypeList.join(', ') }} } from "../type/index"
+import { {{ methodList.join(', ') }} } from './net'
+<% for item in xhr.list %>
+/**
+ * {{ item.desc }}
+ * @param {{ item.req }}
+ */
+export async function {{ item.name }}(params: {{ item.req }}) {
+    return await {{ item.method }}(Api.{{ item.api }}, params)
+}
+<% endfor %>

@@ -1,0 +1,19 @@
+/**
+ * This is auto created by freemaker script, place do not modify directly
+ * @author {{ author }}
+ */
+import { backendServer, getCurrentEnv } from '../utils/env';
+
+const env = getCurrentEnv();
+
+let perset: string = '';
+if(env === 'localhost'){
+  perset = '/node';
+}
+
+export default {
+    <% for item in xhr.list %>
+    /* {{ item.desc }} */
+    {{ item.api }} : `${backendServer[env]}${perset}{{item.url}}`,
+    <% endfor %>
+}
