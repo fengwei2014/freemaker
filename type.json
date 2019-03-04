@@ -1,0 +1,65 @@
+{
+    "ChangeDriverReq": {
+      "sid": "123123123",
+      "orderId": "123123123",
+      "reasonLabel": "123123123",
+      "reassignLabels": "",
+      "remarkLabel": ""
+    },
+    "ReasonDetailReq": {
+      "sid": "123123123",
+      "firstLevelReasonMenuId": 123123123
+    },
+    "ReasonReq": {
+      "sid": "123123123"
+    },
+    "ReasonRes": {
+      "code": 0,
+      "message": "成功",
+      "data": {
+        "firstLevelReasonMenus": [{
+          "reasonMenuId": 1,
+          "reasonMenuText": "理由1"
+        }, {
+          "reasonMenuId": 2,
+          "reasonMenuText": "理由二"
+        }],
+        "changeDriverCount": 3
+      }
+    },
+    "ReasonDetailRes": {
+      "secondLevelReasonMenus": [{
+        "menuText": "按钮",
+        "menuId": 1,
+        "tags": [{
+          "tagId": 1,
+          "tagText": "5米"
+        }, {
+          "tagId": 2,
+          "tagText": "8米"
+        }, {
+          "tagId": 1,
+          "tagText": "10米"
+        }]
+      }, {
+        "menuText": "阿萨德发",
+        "menuId": 2,
+        "tags": [{
+          "tagId": 1,
+          "tagText": "5米"
+        }, {
+          "tagId": 2,
+          "tagText": "8米"
+        }, {
+          "tagId": 1,
+          "tagText": "10米"
+        }]
+      }],
+      "otherReasonOpen": 1
+    },
+    "ResError": {
+      "code": 1,
+      "message": "获取数据出错"
+    }
+  }
+  
