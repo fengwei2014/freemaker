@@ -1,9 +1,11 @@
 {
   "name": "freemaker",
-  "version": "1.0.1-bate",
+  "version": "1.0.1",
   "description": "create file from api doc config",
   "main": "index.js",
   "scripts": {
+    "freemaker": "node test.js freemaker",
+    "quicktype": "node test.js quicktype",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

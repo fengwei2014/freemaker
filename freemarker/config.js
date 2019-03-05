@@ -1,8 +1,8 @@
 module.exports = {
     author: "freemaker",
     quicktype: {
-        srcDir: "src/typesrc",
-        outDir: "src/type",
+        srcDir: "freemarker/quicktypesrc",
+        outDir: "src",
         srcExtend: "json",
         outExtend: "ts"
     },
