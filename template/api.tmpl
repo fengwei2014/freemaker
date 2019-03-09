@@ -2,18 +2,16 @@
  * This is auto created by freemaker script, place do not modify directly
  * @author {{ author }}
  */
-import { backendServer, getCurrentEnv } from '../utils/env';
+import { backendServer } from '../utils/env';
 
-const env = getCurrentEnv();
+const env = process.env.VUE_APP_ENV;
 
-let perset: string = '';
-if(env === 'localhost'){
-  perset = '/node';
-}
+const domainPath: string = env ? backendServer[env] : '';
+const perset: string = env ? '' : '/node';
 
 export default {
     <% for item in xhr.list %>
     /* {{ item.desc }} */
-    {{ item.api }} : `${backendServer[env]}${perset}{{item.url}}`,
+    {{ item.api }} : `${domainPath + perset}{{item.url}}`,
     <% endfor %>
 }
