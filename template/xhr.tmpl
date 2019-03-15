@@ -10,7 +10,7 @@ import { {{ methodList.join(', ') }} } from './net'
  * {{ item.desc }}
  * @param {{ item.req }}
  */
-export async function {{ item.name }}(params: {{ item.req }}) {
+export async function {{ item.name }}(params: <% if item.req %>{{ item.req }}<% else %>any = {}<% endif %>) {
     return await {{ item.method }}(Api.{{ item.api }}, params)
 }
 <% endfor %>

@@ -50,6 +50,15 @@ module.exports = {
                 url: "/api/path4",
                 req: "ChangeDriverReq",
                 res: "ChangeDriverRes"
+            },
+            {
+                desc: "入参为空",
+                name: "testReqNull",
+                method: "get",
+                api: "testReqNull",
+                url: "/api/path4",
+                req: "",
+                res: "ChangeDriverRes"
             }
         ]
     }
