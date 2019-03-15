@@ -1,6 +1,6 @@
 {
   "name": "freemaker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "create file from api doc config",
   "main": "index.js",
   "scripts": {
