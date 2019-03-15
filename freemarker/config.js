@@ -15,11 +15,13 @@ module.exports = {
     },
     xhr: {
         file: "src/utils/xhr.ts",
+        multipleDomain: ['domain1','domain2'],
         list: [{
                 desc: "获取更多操作",
                 name: "getMoreOptions",
                 method: "get",
                 api: "rightmenu",
+                domain: 'domain1',
                 url: "/api/path1",
                 req: "ReasonReq",
                 res: "ReasonRes"
@@ -29,6 +31,7 @@ module.exports = {
                 name: "getchangeReason",
                 method: "get",
                 api: "changeReason",
+                domain:'domain2',
                 url: "/api/path2",
                 req: "ReasonReq",
                 res: "ReasonRes"
@@ -38,6 +41,7 @@ module.exports = {
                 name: "getReasonDetail",
                 method: "get",
                 api: "reasonDetail",
+                domain: 'domain2',
                 url: "/api/path3",
                 req: "ReasonDetailReq",
                 res: "ReasonDetailRes"
@@ -47,6 +51,7 @@ module.exports = {
                 name: "submitChangeReason",
                 method: "get",
                 api: "submitReason",
+                domain: 'domain1',
                 url: "/api/path4",
                 req: "ChangeDriverReq",
                 res: "ChangeDriverRes"
@@ -56,6 +61,7 @@ module.exports = {
                 name: "testReqNull",
                 method: "get",
                 api: "testReqNull",
+                domain: 'domain1',
                 url: "/api/path4",
                 req: "",
                 res: "ChangeDriverRes"

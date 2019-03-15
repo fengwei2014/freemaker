@@ -2,16 +2,21 @@
  * This is auto created by freemaker script, place do not modify directly
  * @author {{ author }}
  */
+<% if xhr.multipleDomain %>
+/**
+ * 每个domain保证成多环境的配置
+ */ 
+import { {{xhr.multipleDomain.join(', ')}} } from '../utils/env';
+<% else %>
 import { backendServer } from '../utils/env';
-
+<% endif %>
 const env = process.env.VUE_APP_ENV;
 
-const domainPath: string = env ? backendServer[env] : '';
 const perset: string = env ? '' : '/node';
 
 export default {
     <% for item in xhr.list %>
     /* {{ item.desc }} */
-    {{ item.api }} : `${domainPath + perset}{{item.url}}`,
+    {{ item.api }} : `${<% if item.domain %>env ? {{item.domain}}[env] : ''<% else %>env ? backendServer[env] : ''<% endif %> + perset}{{item.url}}`,
     <% endfor %>
 }
