@@ -8,9 +8,7 @@ chokidar.watch(watchDir).on('change', function () {
 
     shelljs.exec('node test.js quicktype');
 
-    setTimeout(() => {
-        shelljs.exec("node test.js freemaker");
-    },1500)
+    shelljs.exec("node test.js freemaker");
 
     console.log("=================== auto exec end =======================");
 
