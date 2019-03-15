@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/fengwei2014/freemaker#readme",
   "devDependencies": {
-    "cz-conventional-changelog": "^2.1.0"
+    "chokidar": "^2.1.2",
+    "cz-conventional-changelog": "^2.1.0",
+    "shelljs": "^0.8.3"
   },
   "dependencies": {
     "nunjucks": "^3.1.7",
